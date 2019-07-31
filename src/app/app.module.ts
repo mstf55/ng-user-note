@@ -12,7 +12,6 @@ import { ToastrModule } from 'ngx-toastr';
 
 import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
-import { UserComponent } from './user/user.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { UserFormComponent } from './user-form/user-form.component';
@@ -20,14 +19,9 @@ import { UserFormComponent } from './user-form/user-form.component';
 import { environment } from '../environments/environment';
 import { UserModule } from './user/user.module';
 
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent,
     HomeComponent,
     AboutComponent,
     UserFormComponent],
