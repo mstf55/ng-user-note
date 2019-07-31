@@ -1,0 +1,47 @@
+<div class="card text-center">
+	<div class="card-header">
+		<p class="btn btn-link" (click)="changeViewForm()">{{formText}}</p>
+	</div>
+	<div class="card-body">
+		<div *ngIf="!(user | async)">
+			<form [formGroup]="userForm" (ngSubmit)="submit()">
+				<div class="form-group row" *ngIf="!isLoginForm">
+					<label for="username" class="col-sm-3 col-form-label">User Name</label>
+					<div class="col-sm-6">
+						<input type="text" id="username" name="username" class="form-control" formControlName="username">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="email" class="col-sm-3 col-form-label">Email</label>
+					<div class="col-sm-6">
+						<input type="email" id="email" name="email" class="form-control" formControlName="email" required placeholder="Email">
+					</div>
+					<small class="col-sm-3" *ngIf="userForm.controls['email'].invalid && (userForm.controls['email'].dirty || userForm.controls['email'].touched)"
+					 class="alert alert-danger">
+						{{ formErrors.email }}
+					</small>
+				</div>
+				<div class="form-group row">
+					<label for="password" class="col-sm-3 col-form-label">Password</label>
+					<div class="col-sm-6">
+						<input type="password" id="password" name="password" class="form-control" formControlName="password" required
+						 placeholder="Password">
+					</div>
+					<small class="col-sm-3" *ngIf="userForm.controls['password'].invalid && (userForm.controls['password'].dirty || userForm.controls['password'].touched)"
+					 class="alert alert-danger">
+						{{ formErrors.password }}
+					</small>
+				</div>
+
+				<div class="form-group row">
+					<div class="col-sm-6 offset-sm-3">
+						<button [disabled]="!userForm.valid" class="btn btn-primary">{{buttonText}}</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="card-footer text-muted">
+
+	</div>
+</div>

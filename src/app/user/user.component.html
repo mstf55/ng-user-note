@@ -1,0 +1,16 @@
+
+
+<div class="card" style="max-width: 500px;" *ngIf="user | async as user">
+    <div class="row no-gutters">
+        <div class="col-md-5" style="background: #868e96;">
+            <img src="..//../assets/man.png" class="card-img-top h-100" alt="...">
+        </div>
+        <div class="col-md-7">
+            <div class="card-body">
+                <h5 class="card-title"><input type="text" value="{{user.userName}}" (change)="changeUserName($event)"></h5>
+                <p class="card-text"> UID: {{ user.uid }}</p>
+                <button class="btn btn-link">{{ user.email }}</button>
+                <button class="button btn btn-danger" (click)="logout()">Logout</button>
+            </div>
+        </div>
+    </div>

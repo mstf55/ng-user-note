@@ -1,0 +1,16 @@
+
+
+<div class="jumbotron">
+    <h1>About page works!</h1>
+    <div class="lead">
+            <ul class="list-unstyled">
+                <li>User Name Changes
+                    <ul class="list-group">
+                        <li class="list-group-item" *ngFor="let change of changes | async">
+                            <span>change in user Name field is from {{change.oldValue}} to {{change.newValue}}</span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+</div>
