@@ -1,9 +1,9 @@
-<div class="card text-center">
+<div class="card text-center" *ngIf="!(user | async);else alreadyLogin">
 	<div class="card-header">
 		<p class="btn btn-link" (click)="changeViewForm()">{{formText}}</p>
 	</div>
 	<div class="card-body">
-		<div *ngIf="!(user | async)">
+		<div>
 			<form [formGroup]="userForm" (ngSubmit)="submit()">
 				<div class="form-group row" *ngIf="!isLoginForm">
 					<label for="username" class="col-sm-3 col-form-label">User Name</label>
@@ -45,3 +45,5 @@
 
 	</div>
 </div>
+
+<ng-template #alreadyLogin>you already login</ng-template>
