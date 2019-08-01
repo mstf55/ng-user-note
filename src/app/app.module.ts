@@ -11,20 +11,17 @@ import { ToastrModule } from 'ngx-toastr';
 
 import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { UserFormComponent } from './user-form/user-form.component';
 
 import { environment } from '../environments/environment';
 import { UserModule } from './user/user.module';
 import { SharedModule } from './shared/shared.module';
+import { UserFormModule } from './user-form/user-form.module';
+import { HomeModule } from './home/home.module';
+import { AboutModule } from './about/about.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent,
-    AboutComponent,
-    UserFormComponent],
+    AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -32,6 +29,9 @@ import { SharedModule } from './shared/shared.module';
     LayoutModule,
     UserModule,
     SharedModule,
+    UserFormModule,
+    HomeModule,
+    AboutModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
