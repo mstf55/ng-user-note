@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../core/auth.service';
+import { AuthService } from '../core/services/auth.service';
 import { Observable } from 'rxjs';
 import { User } from './user';
-import { UserService } from '../core/user.service';
+import { UserService } from '../core/services/user.service';
 import { ToastrService } from 'ngx-toastr';
 
 

@@ -4,9 +4,9 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { AuthService } from './auth.service';
-import { Note } from '../note/note';
+import { Note } from '../../note/note';
 
-import { USER_COLLECTION, NOTE_COLLECTION } from '../constants';
+import { USER_COLLECTION, NOTE_COLLECTION } from '../../shared/constants';
 
 
 @Injectable()

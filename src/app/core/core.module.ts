@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { AuthService } from './auth.service';
-import {NoteService} from './note.service';
-import {NameTrackerService} from './name-tracker.service';
+import { AuthService } from './services/auth.service';
+import {NoteService} from './services/note.service';
+import {NameTrackerService} from './services/name-tracker.service';
 
 
 

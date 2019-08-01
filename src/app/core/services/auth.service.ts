@@ -6,8 +6,8 @@ import {
 
 import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-import { User } from '../user/user';
-import { USER_COLLECTION } from '../constants';
+import { User } from '../../user/user';
+import { USER_COLLECTION } from '../../shared/constants';
 
 
 @Injectable()

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { User } from '../user/user';
+import { User } from '../../user/user';
 import { AngularFirestoreDocument, AngularFirestore } from '@angular/fire/firestore';
-import { USER_COLLECTION } from '../constants';
+import { USER_COLLECTION } from '../../shared/constants';
 import { merge } from 'rxjs/operators';
 
 @Injectable({

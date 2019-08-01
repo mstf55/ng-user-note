@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore} from '@angular/fire/firestore';
-import {  CHANGE_COLLECTION } from '../constants';
+import {  CHANGE_COLLECTION } from '../../shared/constants';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 

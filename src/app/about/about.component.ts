@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { NameTrackerService } from '../core/name-tracker.service';
+import { NameTrackerService } from '../core/services/name-tracker.service';
 
 @Component({
   selector: 'app-about',
