@@ -18,6 +18,7 @@ import { UserFormComponent } from './user-form/user-form.component';
 
 import { environment } from '../environments/environment';
 import { UserModule } from './user/user.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { UserModule } from './user/user.module';
     LayoutModule,
     UserModule,
     NotesModule,
+    SharedModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,

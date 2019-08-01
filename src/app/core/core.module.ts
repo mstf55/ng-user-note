@@ -6,6 +6,8 @@ import {NameTrackerService} from './name-tracker.service';
 
 
 @NgModule({
-  providers: [AuthService,NoteService,NameTrackerService]
+  providers: [AuthService,NoteService,NameTrackerService],
+  declarations:[],
+  exports:[]
 })
 export class CoreModule { }

@@ -4,14 +4,15 @@ import { FormsModule } from '@angular/forms';
 
 import { NoteListComponent } from './note-list/note-list.component';
 import { NoteDetailComponent } from './note-detail/note-detail.component';
-import {ShortifyString} from '../core/shortify-pipe';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule  ],
-  declarations: [NoteListComponent, NoteDetailComponent,ShortifyString],
+    FormsModule,
+    SharedModule],
+  declarations: [NoteListComponent, NoteDetailComponent],
   providers: []
 })
 export class NotesModule { }
