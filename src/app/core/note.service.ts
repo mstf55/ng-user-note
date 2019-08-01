@@ -23,14 +23,14 @@ export class NoteService {
     });
   }
 
-  getData(): Observable<any[]> {
+  getData(): Observable<Note[]> {
          return this.afs.doc<Note>(`${USER_COLLECTION}/${this.userId}`)
          .collection(NOTE_COLLECTION,(ref) => ref.orderBy('time', 'desc').limit(10))
          .snapshotChanges().pipe(
             map((actions) => {
               return actions.map((a) => {
                 const data = a.payload.doc.data();
-                return { id: a.payload.doc.id, ...data };
+                return  { id: a.payload.doc.id, content:data.content ,time:data.time};
               });
             })
           );
